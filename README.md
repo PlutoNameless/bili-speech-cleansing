@@ -4,19 +4,9 @@ bilibili-safe
 
 作为一名常注Bilibili的游民，我再也不能认识这种无节操秀下限的弹幕玷污我们的荧屏。
 
-于是我就消耗我自己③个小时的生命定制了一个Bilibili弹幕屏蔽设定；日后还会持续更新。
+这是一个Blibili弹幕的过滤计划。希望能得到大家的支持。我也会尽量的保持更新来对付最新的恶意、无用弹幕。
 
- 
 
-由于本人并不会正则表达式，很多正则表达式的规则借鉴与一下几个网站，感谢他们对我提供的产考资料。
-
-http://www.blackglory.me/bilibili-barrage-shielded-pool/ （Bilibili弹幕屏蔽池，由于误屏蔽和一些本人不喜欢的弹幕没有屏蔽掉的原因才印发我自己编写过滤计划的初衷。）
-
-http://space.bilibili.tv/123958/1271.html （bilibili屏蔽分级计划，感谢他提供的一些关键词的屏蔽，也感谢对一些函数的介绍运用方法等。）
-
-http://deerchao.net/tutorials/regex/regex.htm （正则表达式30分钟入门教程，感谢这份很详细的正则表达式教程。）
-
- 
 
 声明：
 
@@ -32,7 +22,7 @@ http://deerchao.net/tutorials/regex/regex.htm （正则表达式30分钟入门�
 
 感谢一下人员对本弹幕过滤计划的支持
 
-BlueIceXFX      Microdog
+BlueIceXFX          Microdog
 
  
 
