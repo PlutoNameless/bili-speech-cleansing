@@ -1,30 +1,25 @@
 <filters>
-  <item enabled="true">t=#ver.0.0.6</item>
+  <item enabled="true">t=#ver.0.0.7</item>
   <item enabled="true">t=^.$</item>
-  <item enabled="true">t=(.)\1{3,}</item>
   <item enabled="true">t=(.{3}).(\1.)+</item>
-  <item enabled="true">t=\d{2,4}/\d{1,2}/\d{1,2}</item>
-  <item enabled="true">t=\d{2,4}-\d{1,2}-\d{1,2}</item>
-  <item enabled="true">t=\d{2,4}年\d{1,2}月\d{1,2}日</item>
-  <item enabled="true">t=\d{2,4} \d{1,2} \d{1,2}</item>
-  <item enabled="true">t=\d{2,4}:\d{1,2}:\d{1,2}</item>
-  <item enabled="true">t=\d{2,4}：\d{1,2}：\d{1,2}</item>
-  <item enabled="true">t=\d{1,2}:\d{1,2}(:\d{0,2})?</item>
-  <item enabled="true">t=\d{1,2}/\d{1,2}(/\d{0,2})?</item>
-  <item enabled="true">t=\d{1,2}：\d{1,2}(：\d{0,2})?</item>
-  <item enabled="true">t=^([▇█▆=o0O_\-:з3」∠≧∇≦v^ー°Д∀´｀ω])\1*?.+\1+$</item>
+  <item enabled="true">t=^([▂▅▇█▆=o0O_\-:з3」∠≧∇≦v^ー°Д∀´｀ω])\1*?.+\1+$</item>
+  <item enabled="true">t=^\s{4,}$</item>
+  <item enabled="true">t=^[\S\s]{35,}$</item>
+  <item enabled="true">t=\d{2,4}[:|/| |：|年|-]\d{1,2}[:|/| |：|月|-](\d{1,2})?</item>
+  <item enabled="true">t=\d{1,2}[:|/| |：|-]\d{1,2}([:|/| |：|-]\d{0,2})?</item>
+  <item enabled="true">t=([^[:punct:](?!bili)]+)\1{3,}</item>
   <item enabled="true">t=伏笔</item>
   <item enabled="true">t=人干的</item>
   <item enabled="true">t=时臣的错</item>
   <item enabled="true">t=ntr|NTR</item>
   <item enabled="true">t=小学生</item>
   <item enabled="true">t=by|BY|By</item>
-  <item enabled="true">t=CF|cf</item>
+  <item enabled="true">t=CF|cf|Cf|cF</item>
   <item enabled="true">t=Q12Q|q12q|Q12q|12a|12A|12q|12Q|12dog|12DOG|12Dog|12dora|12Dora|12DORA|M12|m12</item>
   <item enabled="true">t=一根火把</item>
   <item enabled="true">t=异性恋|同性恋</item>
   <item enabled="true">t=老E|老e</item>
-  <item enabled="true">t=屮艸芔茻</item>
+  <item enabled="true">t=屮|艸|芔|茻</item>
   <item enabled="true">t=(毛|什么)啊</item>
   <item enabled="true">t=非战斗人员迅速撤离</item>
   <item enabled="true">t=签到|打卡</item>
@@ -54,4 +49,5 @@
   <item enabled="true">t=作死</item>
   <item enabled="true">t=FFF团|fff团</item>
   <item enabled="true">t=把持不住</item>
+  <item enabled="true">t=▂|▅|▆|▇|█</item>
 </filters>
