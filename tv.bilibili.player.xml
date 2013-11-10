@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <filters>
   <item enabled="true">t=#ver.0.1.0</item>
   <item enabled="true">t=^.$</item>
