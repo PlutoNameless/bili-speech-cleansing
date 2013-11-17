@@ -1,6 +1,9 @@
 Statement:
+
 1, this filter plan established in Bilibili own player setting, obstacles caused by their own players, this filter plan not responsible.
+
 2, the filtering error caused by filtering plan, lead to the barrage of loss as a result, this plan not responsible. We are looking forward to your feedback.
+
 3, this is not a filter program list is not updated regularly, questioning, the nu scold, please update filter list before feedback after implementation.
 
 Details: http://blog.thiece.cn/bilibili-safe
