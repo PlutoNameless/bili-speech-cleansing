@@ -1,10 +1,10 @@
-bilibili-safe
-=============
-本着对Bilibili越来越多的弹幕无节操秀下限。
+Statement:
+1, this filter plan established in Bilibili own player setting, obstacles caused by their own players, this filter plan not responsible.
+2, the filtering error caused by filtering plan, lead to the barrage of loss as a result, this plan not responsible. We are looking forward to your feedback.
+3, this is not a filter program list is not updated regularly, questioning, the nu scold, please update filter list before feedback after implementation.
 
-作为一名常注Bilibili的游民，我再也不能认识这种无节操秀下限的弹幕玷污我们的荧屏。
+Details: http://blog.thiece.cn/bilibili-safe
 
-这是一个Blibili弹幕的过滤计划。希望能得到大家的支持。我也会尽量的保持更新来对付最新的恶意、无用弹幕。
 
 
 
@@ -17,15 +17,7 @@ bilibili-safe
 3、本过滤计划过滤列表不不定期更新，质疑，怒骂，反馈前请先更新过滤列表确定后实施。
 
  
+详情：http://blog.thiece.cn/bilibili-safe
 
-感谢：
 
-感谢一下人员对本弹幕过滤计划的支持
 
-BlueIceXFX          Microdog
-
- 
-
-使用方法：
-
-我使用的是XML的，您可以在播放器→ 屏蔽设定→自定义过滤内容里面点击右键导入XML来进行屏蔽。记得勾选正则模式哦 。对于一些不喜欢的屏蔽规则，每条式子之后均可打钩自选启用与否。
