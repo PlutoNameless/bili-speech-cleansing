@@ -1,5 +1,5 @@
 <filters>
-  <item enabled="true">t=#ver.0.1.1</item>
+  <item enabled="true">t=#ver.0.1.2</item>
   <item enabled="true">t=^.$</item>
   <item enabled="true">t=^([▂▅▇█▆=o0O_\-:з3」∠≧∇≦v^ー°Д∀´｀ω★])\1*?.+\1+$</item>
   <item enabled="true">t=^\s{4,}$</item>
@@ -7,46 +7,38 @@
   <item enabled="true">t=\d{2,4}[:|/| |：|年|-]\d{1,2}[:|/| |：|月|-](\d{1,2})?</item>
   <item enabled="true">t=\d{1,2}[:|/| |：|-]\d{1,2}([:|/| |：|-]\d{0,2})?</item>
   <item enabled="true">t=((?:[^[:punct:]](?!bili))+)\1{3,}</item>
-  <item enabled="true">t=伏笔</item>
+  <item enabled="true">t=伏笔|时臣的错</item>
   <item enabled="true">t=人干的|人干事</item>
-  <item enabled="true">t=时臣的错</item>
   <item enabled="true">t=ntr|NTR|Ntr|NTL|ntl|Ntl|NTRS|ntrs|Ntrs</item>
-  <item enabled="true">t=小学生</item>
+  <item enabled="true">t=.学生</item>
   <item enabled="true">t=by|BY|By</item>
   <item enabled="true">t=CF|cf|Cf|cF</item>
-  <item enabled="true">t=Q12Q|q12q|Q12q|12a|12A|12q|12Q|12dog|12DOG|12Dog|12dora|12Dora|12DORA|M12|m12</item>
-  <item enabled="true">t=一根火把</item>
-  <item enabled="true">t=异性恋|同性恋</item>
+  <item enabled="true">t=Q12Q|q12q|Q12q|12a|12A|12q|12Q|12dog|12DOG|12Dog|12dora|12Dora|12DORA|M12|m12|交450</item>
+  <item enabled="true">t=异性恋|同性恋|一根火把</item>
   <item enabled="true">t=老E|老e</item>
-  <item enabled="true">t=屮|艸|芔|茻</item>
   <item enabled="true">t=(毛|什么)啊</item>
-  <item enabled="true">t=非战斗人员迅速撤离</item>
-  <item enabled="true">t=NIMABI|nimabi|2B|2b|NMB|nmb|Nmb</item>
+  <item enabled="true">t=非战斗人员迅速撤离|前方\S{4,}</item>
+  <item enabled="true">t=NIMABI|nimabi|2B|2b|NMB|nmb|Nmb|SB|sb|Sb</item>
   <item enabled="true">t=avi|rmvb|AVI|RMVB|Player|player</item>
-  <item enabled="true">t=清(弹幕|屏)|弹幕清</item>
+  <item enabled="true">t=(清|刷)(弹幕|屏)|弹幕清</item>
   <item enabled="true">t=国耻|国人就|[老劳][子资]|国界|滚(.{0,5}吧|\s|！)|还.{0,5}干</item>
   <item enabled="true">t=汉[奸J]|纳粹</item>
   <item enabled="true">t=(?&lt;!银)[你她它他][马妈娘妹奶](?!妈|奶|娘)|([红黄蓝篮绿黑青白紫橙粉][子字色].*|(是|自古|真心).{0,5})(?&lt;!牛|苦)([xXbB逼滚死屎狗]|13|烧饼)|[傻煞斯]比|智[力商][低差]|下限</item>
-  <item enabled="true">t=优越|果断(滚|撤退|离开|右上)</item>
-  <item enabled="true">t=1L|1l|一楼|1楼</item>
-  <item enabled="true">t=沙发|地板|[路飘飞游撸]过|抄袭|sf|Sf|SF</item>
+  <item enabled="true">t=优越|果断(滚|撤退|离开|右上)|请(滚|撤退|离开|右上)</item>
+  <item enabled="true">t=沙发|地板|[路飘飞游撸]过|抄袭|sf|Sf|SF|1L|1l|一楼|1楼|前\d{1,}</item>
   <item enabled="true">t=弹幕测试|弹幕合影</item>
   <item enabled="true">t=节操换</item>
-  <item enabled="true">t=不烧真爱</item>
-  <item enabled="true">t=帝吧|李毅吧|D8</item>
-  <item enabled="true">t=剧透:</item>
+  <item enabled="true">t=帝吧|李毅吧</item>
+  <item enabled="true">t=剧透:|剧透：|透剧：|透剧:</item>
   <item enabled="true">t=德玛西亚|马来西亚之力</item>
   <item enabled="true">t=麻痹|妈逼|白痴|煞笔</item>
-  <item enabled="true">t=王大锤</item>
-  <item enabled="true">t=作死</item>
-  <item enabled="true">t=FFF团|fff团</item>
-  <item enabled="true">t=把持不住</item>
-  <item enabled="true">t=▂|▅|▆|▇|█|★═</item>
-  <item enabled="true">t=.字你.</item>
-  <item enabled="true">t=♂|♀</item>
-  <item enabled="true">t=刘明|火钳|火前留名|发来贺电|均已破产|签到|打卡</item>
-  <item enabled="true">t=加多宝</item>
-  <item enabled="true">t=厂下广卞廿十一卉半与</item>
+  <item enabled="true">t=王大锤|作死</item>
+  <item enabled="true">t=FFF团|fff团|不烧真爱</item>
+  <item enabled="true">t=把持不住|纯女币|硬币送上|新鲜的\S{2,}</item>
+  <item enabled="true">t=▂|▅|▆|▇|█|★═|♂|♀</item>
+  <item enabled="true">t=刘明|火钳|(火钳|火前)(刘明|留名)|发来\S{2,}|核电|均已破产|签到|打卡|每日\S{2,}|看见\S{1,}我就来了|\S{2,}赞助</item>
+  <item enabled="true">t=厂下广卞廿十一卉半与|屮|艸|芔|茻</item>
+  <item enabled="true">t=你不是\S{1,}个人|你们不是\S{1,}个人|\S{1,}字你\S{1,}|第\S{1,}周目</item>
   <item enabled="true">u=59e46fd5</item>
   <item enabled="true">u=Dcba3f39</item>
   <item enabled="true">u=D036882b</item>
@@ -190,5 +182,53 @@
   <item enabled="true">u=d845dce9</item>
   <item enabled="true">u=49f479cd</item>
   <item enabled="true">u=8d31aa17</item>
-
+  <item enabled="true">u=90a9a91e</item>
+  <item enabled="true">u=fba7c829</item>
+  <item enabled="true">u=78bae7ad</item>
+  <item enabled="true">u=3f847e16</item>
+  <item enabled="true">u=9dc03eab</item>
+  <item enabled="true">u=916859f0</item>
+  <item enabled="true">u=705fe7fe</item>
+  <item enabled="true">u=3d58edf4</item>
+  <item enabled="true">u=168080e4</item>
+  <item enabled="true">u=03933529</item>
+  <item enabled="true">u=4146d6bf</item>
+  <item enabled="true">u=c83ca06f</item>
+  <item enabled="true">u=db163f3b</item>
+  <item enabled="true">u=265f8558</item>
+  <item enabled="true">u=15cc01cd</item>
+  <item enabled="true">u=07ad58f8</item>
+  <item enabled="true">u=432b8a8b</item>
+  <item enabled="true">u=747e445d</item>
+  <item enabled="true">u=f5f33be2</item>
+  <item enabled="true">u=97a4d9b6</item>
+  <item enabled="true">u=1048f850</item>
+  <item enabled="true">u=1048f850</item>
+  <item enabled="true">u=8c0a4296</item>
+  <item enabled="true">u=8c0a4296</item>
+  <item enabled="true">u=432b8a8b</item>
+  <item enabled="true">u=74ce4b89</item>
+  <item enabled="true">u=701e227c</item>
+  <item enabled="true">u=105a0596</item>
+  <item enabled="true">u=2272d9e1</item>
+  <item enabled="true">u=e4617ad1</item>
+  <item enabled="true">u=f54ec281</item>
+  <item enabled="true">u=270d8622</item>
+  <item enabled="true">u=0e83e8a5</item>
+  <item enabled="true">u=4622de3b</item>
+  <item enabled="true">u=f0fb8909</item>
+  <item enabled="true">u=f9d38ecf</item>
+  <item enabled="true">u=e25c913b</item>
+  <item enabled="true">u=6be7d4a5</item>
+  <item enabled="true">u=453b8216</item>
+  <item enabled="true">u=76e77d0e</item>
+  <item enabled="true">u=8ecd1f79</item>
+  <item enabled="true">u=d58f8e3f</item>
+  <item enabled="true">u=a49746bb</item>
+  <item enabled="true">u=27808aec</item>
+  <item enabled="true">u=ad07db50</item>
+  <item enabled="true">u=b90e385f</item>
+  <item enabled="true">u=9614d1c5</item>
+  <item enabled="true">u=65faeb61</item>
+  <item enabled="true">u=157e8ec2</item>
 </filters>
