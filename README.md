@@ -1,3 +1,13 @@
+Tip:
+
+1, this may be the last version of an updated version of the rules of the bar. Because Chrome plug-in is a failure of my own, and do not want to continue to toss the plug fully understand that the world of his own. So the future may still go to update, if you encounter are not shielded update rules barrage when no brain. So thank you for your continued support is also slightly, although the feeling has always been my one person in a self, but they like just fine for it.
+
+
+提示：
+
+1、这个版本可能是最后一个有规则性更新的版本了吧。因为Chrome插件化我自己是失败，然后也不想继续折腾插件那个自己完全不懂的世界了。那么以后可能还是会去更新的，如果遇到了现在的更新规则无法屏蔽的无脑弹幕的时候。那么也是感谢你们的一直支持咯，虽然感觉一直都是我一个人在自导自演，但是自己喜欢就好对吧。
+
+
 Statement:
 
 1, this filter plan established in Bilibili own player setting, obstacles caused by their own players, this filter plan not responsible.
