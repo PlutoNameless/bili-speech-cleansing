@@ -1,5 +1,5 @@
 <filters>
-  <item enabled="true">t=#ver.0.1.2</item>
+  <item enabled="true">t=#ver.0.1.5</item>
   <item enabled="true">t=^.$</item>
   <item enabled="true">t=^([▂▅▇█▆=o0O_\-:з3」∠≧∇≦v^ー°Д∀´｀ω★])\1*?.+\1+$</item>
   <item enabled="true">t=^\s{4,}$</item>
@@ -33,12 +33,16 @@
   <item enabled="true">t=德玛西亚|马来西亚之力</item>
   <item enabled="true">t=麻痹|妈逼|白痴|煞笔</item>
   <item enabled="true">t=王大锤|作死</item>
+  <item enabled="true">t=工口</item>
+  <item enabled="true">t=见.滚</item>
   <item enabled="true">t=FFF团|fff团|不烧真爱</item>
   <item enabled="true">t=把持不住|纯女币|硬币送上|新鲜的\S{2,}</item>
   <item enabled="true">t=▂|▅|▆|▇|█|★═|♂|♀</item>
   <item enabled="true">t=刘明|火钳|(火钳|火前)(刘明|留名)|发来\S{2,}|核电|均已破产|签到|打卡|每日\S{2,}|看见\S{1,}我就来了|\S{2,}赞助</item>
   <item enabled="true">t=厂下广卞廿十一卉半与|屮|艸|芔|茻</item>
   <item enabled="true">t=你不是\S{1,}个人|你们不是\S{1,}个人|\S{1,}字你\S{1,}|第\S{1,}周目</item>
+  <item enabled="true">t=←↖↑↗→↘↓↙</item>
+  <item enabled="true">t=●～</item>
   <item enabled="true">u=59e46fd5</item>
   <item enabled="true">u=Dcba3f39</item>
   <item enabled="true">u=D036882b</item>
