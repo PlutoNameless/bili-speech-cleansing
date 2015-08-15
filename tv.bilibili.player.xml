@@ -1,5 +1,6 @@
 <filters>
-  <item enabled="true">t=#ver.0.1.5</item>
+  <item enabled="true">t=#ver.0.1.6</item>
+  <item enabled="true">t=#Time.2015/8/15</item>
   <item enabled="true">t=^.$</item>
   <item enabled="true">t=^([▂▅▇█▆=o0O_\-:з3」∠≧∇≦v^ー°Д∀´｀ω★])\1*?.+\1+$</item>
   <item enabled="true">t=^\s{4,}$</item>
@@ -28,12 +29,10 @@
   <item enabled="true">t=沙发|地板|[路飘飞游撸]过|抄袭|sf|Sf|SF|1L|1l|一楼|1楼|前\d{1,}</item>
   <item enabled="true">t=弹幕测试|弹幕合影</item>
   <item enabled="true">t=节操换</item>
-  <item enabled="true">t=帝吧|李毅吧</item>
   <item enabled="true">t=剧透:|剧透：|透剧：|透剧:</item>
   <item enabled="true">t=德玛西亚|马来西亚之力</item>
   <item enabled="true">t=麻痹|妈逼|白痴|煞笔</item>
   <item enabled="true">t=王大锤|作死</item>
-  <item enabled="true">t=工口</item>
   <item enabled="true">t=见.滚</item>
   <item enabled="true">t=FFF团|fff团|不烧真爱</item>
   <item enabled="true">t=把持不住|纯女币|硬币送上|新鲜的\S{2,}</item>
@@ -43,6 +42,12 @@
   <item enabled="true">t=你不是\S{1,}个人|你们不是\S{1,}个人|\S{1,}字你\S{1,}|第\S{1,}周目</item>
   <item enabled="true">t=←↖↑↗→↘↓↙</item>
   <item enabled="true">t=●～</item>
+  <item enabled="true">t=王者小弟亲妈灵车飘逸</item>
+  <item enabled="true">t=逝者安息</item>
+  <item enabled="true">t=Duang|duang|DUANG</item>
+  <item enabled="true">t=poi|Poi|POI</item>
+  <item enabled="true">t=祥瑞玉兔</item>
+  <item enabled="true">t=家宅平安</item>
   <item enabled="true">u=59e46fd5</item>
   <item enabled="true">u=Dcba3f39</item>
   <item enabled="true">u=D036882b</item>
