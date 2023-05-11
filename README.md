@@ -6,7 +6,6 @@ Statement:
 
 3, this is not a filter program list is not updated regularly, .
 
-Details: http://blog.thiece.cn/bilibili-safe
 
 
 
@@ -23,7 +22,6 @@ Details: http://blog.thiece.cn/bilibili-safe
 3、本过滤计划过滤列表不不定期更新。
 
  
-详情：http://blog.thiece.cn/bilibili-safe
 
 
 
