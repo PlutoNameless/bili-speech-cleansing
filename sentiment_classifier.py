@@ -9,9 +9,10 @@ from sklearn.metrics import accuracy_score, classification_report
 from torch.nn import TransformerEncoder, TransformerEncoderLayer
 
 # 读取加载文件
-def load_data(path):
+def load_data(path, auto_max_length=False):
     texts, labels = [], []
     encodings = ['utf-8', 'utf-16-le', 'utf-16-be', 'gb18030', 'big5']
+    max_text_length = 0  # 用于存储数据集中最长文本的长度
 
     for file in os.listdir(path):
         file_path = os.path.join(path, file)
@@ -22,12 +23,14 @@ def load_data(path):
                         label, text = line.split(" ", 1)
                         texts.append(text.strip())
                         labels.append(int(label))
+                        if auto_max_length:  # 如果启用自动计算 max_length，则需要计算每个文本的长度
+                            max_text_length = max(max_text_length, len(text.strip()))
                 break  # 如果文件成功以某种编码打开并读取，就跳出循环，处理下一个文件
             except UnicodeError:
                 continue  # 如果以某种编码打开文件失败，就尝试下一种编码
         else:
             print(f"Cannot open file {file} at path {file_path} with any of the provided encodings.")
-    return texts, labels
+    return texts, labels, max_text_length
 
 
 class TextDataset(Dataset):
@@ -61,7 +64,7 @@ class TextDataset(Dataset):
 
 
 class SentimentClassifier(nn.Module):
-    def __init__(self, transformer_model, hidden_dim, output_dim, dropout, use_transformer, nhead, num_transformer_layers, vocab_size=None):
+    def __init__(self, transformer_model, hidden_dim, output_dim, dropout, use_transformer, nhead, num_transformer_layers, num_lstm_layers, vocab_size=None):
         super(SentimentClassifier, self).__init__()
         self.use_transformer = use_transformer
         if use_transformer:
@@ -73,7 +76,7 @@ class SentimentClassifier(nn.Module):
             self.transformer = TransformerEncoder(encoder_layer, num_layers=num_transformer_layers)
             input_dim = hidden_dim
             
-        self.lstm = nn.LSTM(input_dim, hidden_dim, batch_first=True)
+        self.lstm = nn.LSTM(input_dim, hidden_dim, num_layers=num_lstm_layers, batch_first=True)
         self.fc = nn.Linear(hidden_dim, output_dim)
         self.dropout = nn.Dropout(dropout)
 
@@ -118,7 +121,8 @@ def evaluate(model, dataloader, criterion, device):
             outputs = model(input_ids, attention_mask)
             loss = criterion(outputs.squeeze(), labels.float())
             running_loss += loss.item()
-            preds = torch.round(outputs.squeeze()).cpu().numpy()
+            preds = torch.round(outputs.squeeze() * 10000) / 10000.0
+            preds = preds.cpu().numpy()
             y_true.extend(labels.cpu().numpy())
             y_pred.extend(preds)
 
@@ -128,23 +132,26 @@ def evaluate(model, dataloader, criterion, device):
 
 
 # 超参数设置
+num_lstm_layers = 2  # LSTM的层数
 hidden_dim = 128 # 隐藏层维度。
-output_dim = 1 # 输出层维度，分类为问题维度为1。
+output_dim = 1 # 输出层维度，2分类为问题维度为1。
 dropout = 0.3 # 神经网络中 dropout 的比例。
 batch_size = 64 # 每个批次的样本数量。
-num_epochs = 10 # 整个数据集的训练次数。
+num_epochs = 100 # 整个数据集的训练次数。
+
+# 数据集最大长度截断
+auto_max_length = True # 是否自动根据数据集调整max_length。当小于128时使用数据集最大长度，当大于等于128小于512时使用数据集最大长度的80%，当大于512时使用512。
 max_length = 128 # 输入文本的最大长度，超过此长度的文本将被截断。
 
 # 弦退火学习率
 use_cosine_annealing = True # 是否使用余弦退火学习率调整策略。如果为 True，则使用余弦退火策略；否则使用固定学习率。
-num_iterations = 100  # 设置训练迭代次数（用于计算余弦退火学习率）。
 initial_learning_rate = 0.001 # 初始学习率，当为启用弦退火学习率时为固定学习率。
 min_learning_rate = 0.0001 # 余弦退火学习率的最小值。
 
 # transformer设置
 use_transformer = True # 是否使用预训练的 transformer 模型。如果为 True，则使用预训练的 transformer 模型；否则使用自定义的 transformer 编码器。
-nhead = 1 # Transformer 编码器中自注意力机制的头数。
-num_transformer_layers = 1 # Transformer 编码器的层数。
+nhead = 12 # Transformer 编码器中自注意力机制的头数。
+num_transformer_layers = 12 # Transformer 编码器的层数。
 
 # 数据集和模型设置
 data_path = "path/to/your/data" # 包含数据集的文件夹路径。
@@ -152,8 +159,19 @@ model_save_path = "path/to/your/models"  # 用于保存模型的文件夹路径�
 transformer_model = "chinese-lert-base" # 预训练的 transformer 模型的名称，这里使用的是哈工大的lert，更多模型可以去huggingface上寻找。
 vocab_size = 30522  # 词汇表大小。如果不使用预训练的 transformer 模型，需要设置为正确的词汇表大小。
 
+
 def main():
-    texts, labels = load_data(data_path)
+    texts, labels, max_text_length = load_data(data_path, auto_max_length)
+    if auto_max_length:
+        if max_text_length < 128:
+            max_length = max_text_length
+        elif 128 <= max_text_length < 512:
+            max_length = int(max_text_length * 0.8)
+        else:
+            max_length = 512
+    else:
+        max_length = 128
+        
     train_texts, val_texts, train_labels, val_labels = train_test_split(texts, labels, test_size=0.2, random_state=42)
 
     tokenizer = AutoTokenizer.from_pretrained(transformer_model)
@@ -165,21 +183,29 @@ def main():
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = SentimentClassifier(transformer_model, hidden_dim=hidden_dim, output_dim=output_dim, dropout=dropout, 
-                            use_transformer=use_transformer, nhead=nhead, num_transformer_layers=num_transformer_layers, 
-                            vocab_size=vocab_size if not use_transformer else None).to(device)
+                                use_transformer=use_transformer, nhead=nhead, num_transformer_layers=num_transformer_layers, 
+                                num_lstm_layers=num_lstm_layers,
+                                vocab_size=vocab_size if not use_transformer else None).to(device)
+
     
     total_params = sum(p.numel() for p in model.parameters())
     print(f"Total number of parameters in the model: {total_params}")
 
     criterion = nn.BCELoss()
 
+    # 计算每个 epoch 的迭代次数
     if use_cosine_annealing:
         optimizer = optim.Adam(model.parameters(), lr=initial_learning_rate)
-        scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=num_iterations, eta_min=min_learning_rate)
+        # 使用 num_epochs * len(train_loader) 作为 T_max 参数
+        total_iterations = num_epochs * len(train_loader)
+        scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=total_iterations, eta_min=min_learning_rate)
     else:
         optimizer = optim.Adam(model.parameters(), lr=initial_learning_rate)
 
+
     best_val_loss = float('inf')
+
+    best_accuracy = 0.0
 
     for epoch in range(num_epochs):
         train_loss = train_epoch(model, train_loader, criterion, optimizer, device, scheduler if use_cosine_annealing else None)
