@@ -121,13 +121,13 @@ def evaluate(model, dataloader, criterion, device):
             outputs = model(input_ids, attention_mask)
             loss = criterion(outputs.squeeze(), labels.float())
             running_loss += loss.item()
-            preds = torch.round(outputs.squeeze() * 10000) / 10000.0
-            preds = preds.cpu().numpy()
+            preds = outputs.squeeze().cpu().numpy()
             y_true.extend(labels.cpu().numpy())
             y_pred.extend(preds)
 
-    accuracy = accuracy_score(y_true, y_pred)
-    report = classification_report(y_true, y_pred, digits=4)
+    y_pred_labels = [1 if pred > 0.5 else 0 for pred in y_pred] 
+    accuracy = accuracy_score(y_true, y_pred_labels)  
+    report = classification_report(y_true, y_pred_labels, digits=4) 
     return running_loss / len(dataloader), accuracy, report
 
 
