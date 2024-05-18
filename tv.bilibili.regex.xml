@@ -1,0 +1,11 @@
+<filters>
+  <item enabled="true">t=#ver.0.1.7</item>
+  <item enabled="true">t=#Time.2024/5/19</item>
+  <item enabled="true">t=^.$</item>
+  <item enabled="true">t=^([▂▅▇█▆=o0O_\-:з3」∠≧∇≦v^ー°Д∀´｀ω★])\1*?.+\1+$</item>
+  <item enabled="true">t=^\s{4,}$</item>
+  <item enabled="true">t=^[\S\s]{35,}$</item>
+  <item enabled="true">t=\d{2,4}[/: 年：年-]\d{1,2}[/: 月：月-](\d{1,2})?</item>
+  <item enabled="true">t=\d{1,2}[/: ：-]\d{1,2}([/: ：-]\d{0,2})?</item>
+  <item enabled="true">t=((?:[^\p{Punct}](?!bili))+)\1{3,}</item>
+</filters>
